@@ -617,3 +617,6 @@ app.*.symbols
 *.pem
 
 .moon/cache
+
+# Panda CSS
+src/styled-system
