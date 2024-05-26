@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "dir": {
+      "type": "string",
+      "description": "Documentation directory\n\nNote: This option will be automatically set"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the documentation site."
+    },
+    "description": {
+      "type": "string",
+      "description": "The description of the documentation site."
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "The description of the documentation site."
+    },
+    "url": {
+      "type": "string",
+      "description": "The URL of the documentation site."
+    },
+    "github": {
+      "type": "string",
+      "description": "The GitHub repository for the documentation site."
+    },
+    "themeColor": {
+      "type": "string",
+      "description": "The theme color of the documentation site.\nIt will be used as the `theme-color` meta tag and a full palette of colors will be generated from it."
+    },
+    "automd": {
+      "type": "boolean",
+      "description": "Enable integration with https://automd.unjs.io"
+    },
+    "buildCache": {
+      "type": "boolean",
+      "description": "Enable build cache (experimental)"
+    },
+    "redirects": {
+      "description": "Redirects for the documentation site.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "landing": {
+      "oneOf": [
+        {
+          "type": "boolean",
+          "const": false
+        },
+        {
+          "type": "object",
+          "description": "Landing page configuration",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string",
+              "description": "Page description"
+            },
+            "contributors": {
+              "type": "boolean",
+              "description": "Show contributors section"
+            },
+            "features": {
+              "type": "array",
+              "description": "Features section description",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "featuresTitle": {
+              "type": "string",
+              "description": "Features section title"
+            },
+            "featuresLayout": {
+              "type": "string",
+              "description": "Features section layout to be in default place or in the hero (only if there is no code)",
+              "enum": ["default", "hero"]
+            },
+            "heroCode": {
+              "description": "Hero Codes",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["content"],
+                  "properties": {
+                    "content": {
+                      "type": "string"
+                    },
+                    "lang": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "heroDescription": {
+              "type": "string",
+              "description": "Additional text in hero (default is same as description)"
+            },
+            "heroLinks": {
+              "description": "Hero Links",
+              "type": "object",
+              "additionalProperties": {
+                "type": "object"
+              }
+            },
+            "heroSubtitle": {
+              "type": "string",
+              "description": "second hero title (default is same as shortDescription)"
+            },
+            "heroTitle": {
+              "type": "string",
+              "description": "main title (default is same as page title)"
+            },
+            "title": {
+              "type": "string",
+              "description": "Page title"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
