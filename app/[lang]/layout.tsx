@@ -1,6 +1,6 @@
 import { RootProvider } from "fumadocs-ui/provider";
 import "fumadocs-ui/style.css";
-import { pageTree } from "@/app/source";
+import { docSource } from "@/modules/docs/source";
 import { I18nProvider, LanguageSelect } from "fumadocs-ui/i18n";
 import { DocsLayout } from "fumadocs-ui/layout";
 import { Inter } from "next/font/google";
@@ -47,7 +47,7 @@ export default function Layout({
         >
           <RootProvider>
             <DocsLayout
-              tree={pageTree[params.lang]}
+              tree={docSource.pageTree[params.lang]}
               nav={{
                 title: params.lang === "cn" ? "目錄" : "My App",
                 url: `/${params.lang}`,
