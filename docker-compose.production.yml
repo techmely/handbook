@@ -1,0 +1,11 @@
+name: techmely
+
+services:
+  handbook:
+    image: registry.gitlab.com/techmely/handbook:0.0.0-rc.0
+    environment:
+      - NEXT_PUBLIC_APP_VERSION=0.0.0-rc.0
+      - NODE_ENV=production
+      - PORT=5000
+    ports:
+      - "5000:5000"
