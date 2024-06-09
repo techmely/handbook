@@ -1,7 +1,6 @@
 export const appConfig = {
+  name: "Techmely HandBook",
   url: "https://techmely.com",
-  organization: {
-    name: "Techmely",
-    address: "HaNoi, VietNam",
-  },
+  address: "HaNoi, VietNam",
+  githubUrl: "https://github.com/techmely",
 };

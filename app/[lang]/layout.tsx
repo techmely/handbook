@@ -1,5 +1,6 @@
 import { RootProvider } from "fumadocs-ui/provider";
 import "fumadocs-ui/style.css";
+import { appConfig } from "@/app.config";
 import { docSource } from "@/modules/docs/source";
 import { I18nProvider, LanguageSelect } from "fumadocs-ui/i18n";
 import { DocsLayout } from "fumadocs-ui/layout";
@@ -49,8 +50,11 @@ export default function Layout({
             <DocsLayout
               tree={docSource.pageTree[params.lang]}
               nav={{
-                title: params.lang === "cn" ? "目錄" : "My App",
+                title: appConfig.name,
                 url: `/${params.lang}`,
+                githubUrl: appConfig.githubUrl,
+                enableSearch: true,
+                transparentMode: "top",
               }}
               sidebar={{ footer: <LanguageSelect /> }}
             >
