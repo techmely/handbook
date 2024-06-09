@@ -1,8 +1,7 @@
 import { map } from "@/.map";
 import { loader } from "fumadocs-core/source";
 import { createMDXSource, defaultSchemas } from "fumadocs-mdx";
-import { z } from 'zod';
-
+import { z } from "zod";
 
 const blogMdxSchema = {
   authors: z.array(z.string()).default([]),
@@ -14,12 +13,11 @@ const blogMdxSchema = {
       .transform((s) => new Date(s))
       .default(new Date().toISOString()),
   ),
-}
-
+};
 
 export const blogSource = loader({
-  baseUrl: '/blog',
-  rootDir: 'blog',
+  baseUrl: "/blog",
+  rootDir: "blog",
   source: createMDXSource(map, {
     schema: {
       frontmatter: defaultSchemas.frontmatter.extend(blogMdxSchema),

@@ -1,9 +1,9 @@
-import { getPages } from '@/app/source';
-import { createI18nSearchAPI } from 'fumadocs-core/search/server';
+import { getPages } from "@/app/source";
+import { createI18nSearchAPI } from "fumadocs-core/search/server";
 
-import { languages } from '@/i18n';
+import { languages } from "@/i18n";
 
-export const { GET } = createI18nSearchAPI('advanced', {
+export const { GET } = createI18nSearchAPI("advanced", {
   indexes: languages.map((lang) => {
     return {
       language: lang,

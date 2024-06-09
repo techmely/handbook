@@ -3,7 +3,6 @@
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.fixAll": "explicit",
-    "source.organizeImports.biome": "explicit",
     "source.addMissingImports": "explicit"
   }
 }

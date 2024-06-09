@@ -1,7 +1,7 @@
 export const appConfig = {
-  url: 'https://techmely.com',
+  url: "https://techmely.com",
   organization: {
-    name: 'Techmely',
-    address: "HaNoi, VietNam"
+    name: "Techmely",
+    address: "HaNoi, VietNam",
   },
-}
+};

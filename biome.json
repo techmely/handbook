@@ -47,13 +47,6 @@
     }
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      "coverage",
-      "public",
-      ".output",
-      ".vercel",
-      ".next"
-    ]
+    "ignore": ["node_modules", "coverage", "public", ".output", ".vercel", ".next"]
   }
 }
