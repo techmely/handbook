@@ -9,7 +9,7 @@ export const domains: Domain[] = [
   {
     name: "Teams",
     param: "teams",
-    description: `Overview our teams`,
+    description: "Overview our teams",
     iconId: "teams",
   },
   {
