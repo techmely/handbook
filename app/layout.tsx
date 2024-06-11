@@ -1,13 +1,14 @@
 import "./global.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import type { ReactNode } from "react";
+import { Body } from "./layout.client";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <Body>
         <RootProvider>{children}</RootProvider>
-      </body>
+      </Body>
     </html>
   );
 }
