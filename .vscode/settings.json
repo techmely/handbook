@@ -1,5 +1,15 @@
 {
-  "cSpell.words": ["algoliasearch", "defu", "fontaine", "fumadocs", "nuxt", "nuxtjs", "resvg"],
+  "cSpell.words": [
+    "algoliasearch",
+    "defu",
+    "fontaine",
+    "fumadocs",
+    "nuxt",
+    "nuxtjs",
+    "resvg",
+    "webp",
+    "zalo"
+  ],
   "editor.codeActionsOnSave": {
     "quickfix.biome": "always",
     "source.fixAll": "explicit",
