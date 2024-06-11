@@ -1,7 +1,7 @@
 {
-  "cSpell.words": ["defu", "fontaine", "fumadocs", "nuxt", "nuxtjs", "resvg"],
+  "cSpell.words": ["algoliasearch", "defu", "fontaine", "fumadocs", "nuxt", "nuxtjs", "resvg"],
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
+    "quickfix.biome": "always",
     "source.fixAll": "explicit",
     "source.addMissingImports": "explicit"
   }
