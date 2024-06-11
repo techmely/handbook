@@ -12,10 +12,17 @@ const fontTaineOptions = {
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
+  pageExtensions: ["ts", "tsx", "mdx"],
+  images: {
+    unoptimized: true,
+  },
   webpack(config) {
     config.plugins = config.plugins || [];
     config.plugins.push(FontaineTransform.webpack(fontTaineOptions));
     return config;
+  },
+  experimental: {
+    webpackBuildWorker: true,
   },
 };
 

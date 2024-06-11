@@ -4,7 +4,6 @@ export const svgIcons = [
   "brand-facebook",
   "brand-telegram",
   "brand-zalo",
-  "brand-facebook",
   "brand-telegram",
   "outline-clock",
   "chevron-right",

@@ -9,19 +9,22 @@
     "lint": "bunx @biomejs/biome format --write"
   },
   "dependencies": {
+    "@resvg/resvg-js": "2.6.2",
     "@techmely/reset-css": "1.0.4",
     "@techmely/utils": "3.2.0",
-    "fumadocs-core": "^11.3.2",
-    "fumadocs-mdx": "^8.2.27",
-    "fumadocs-ui": "^11.3.2",
+    "framer-motion": "11.2.10",
+    "fumadocs-core": "^12.0.2",
+    "fumadocs-mdx": "^8.2.30",
+    "fumadocs-ui": "^12.0.2",
     "next": "^14.2.3",
     "next-sitemap": "4.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rss": "1.2.2"
+    "rss": "1.2.2",
+    "satori": "0.10.13"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.0",
+    "@biomejs/biome": "1.8.1",
     "@techmely/types": "1.6.9",
     "@types/mdx": "^2.0.13",
     "@types/node": "^20.14.2",

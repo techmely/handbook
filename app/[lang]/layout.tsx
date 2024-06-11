@@ -4,12 +4,7 @@ import { appConfig } from "@/app.config";
 import { docSource } from "@/modules/docs/source";
 import { I18nProvider, LanguageSelect } from "fumadocs-ui/i18n";
 import { DocsLayout } from "fumadocs-ui/layout";
-import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 export default function Layout({
   params,
@@ -19,7 +14,7 @@ export default function Layout({
   children: ReactNode;
 }) {
   return (
-    <html lang={params.lang} className={inter.className}>
+    <html lang={params.lang}>
       <body>
         <I18nProvider
           locale={params.lang}
