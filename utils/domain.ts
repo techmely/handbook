@@ -13,10 +13,22 @@ export const domains: Domain[] = [
     iconId: "teams",
   },
   {
-    name: "Business",
-    param: "business",
+    name: "Products",
+    param: "products",
     description: "The product we built",
-    iconId: "business",
+    iconId: "products",
+  },
+  {
+    name: "Engineering",
+    param: "engineering",
+    description: "we are product's engineering",
+    iconId: "engineering",
+  },
+  {
+    name: "Finance",
+    param: "finance",
+    description: "We love money",
+    iconId: "finance",
   },
   {
     name: "Partnership",
