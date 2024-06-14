@@ -1,0 +1,12 @@
+{
+  "title": "Finance",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "payroll",
+    "seed-fundraising",
+    "procurement",
+    "approve-matrix"
+  ]
+}

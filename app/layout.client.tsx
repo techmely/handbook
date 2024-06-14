@@ -1,3 +1,5 @@
+"use client";
+
 import { useDomain } from "@/hooks/useDomain";
 import { domains } from "@/utils/domain";
 import { cva } from "class-variance-authority";
