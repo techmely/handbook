@@ -1,25 +1,5 @@
 {
   "title": "teams",
   "root": true,
-  "pages": [
-    "---Guide---",
-    "index",
-    "comparisons",
-    "...",
-    "---Writing---",
-    "markdown",
-    "../headless/page-conventions",
-    "---Components---",
-    "...components",
-    "---Blocks---",
-    "...blocks",
-    "---Integrations---",
-    "math",
-    "typescript",
-    "twoslash",
-    "openapi",
-    "museum",
-    "---Others---",
-    "[Vercel](https://vercel.com)"
-  ]
+  "pages": ["---Products---", "index", "list", "principles"]
 }
