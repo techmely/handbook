@@ -5,7 +5,7 @@ import type { StringEnum } from "@techmely/types";
 import React, { useEffect, useState, type FC, type SVGAttributes } from "react";
 
 export const SvgUse: FC<SvgUseProps> = ({ role, customPath, id, label, ...rest }) => {
-  const [svgPath, setSvgPath] = useState(`/svg/common.svg#${id}`);
+  const [svgPath, setSvgPath] = useState(`/images/svg/common.svg#${id}`);
 
   useEffect(() => {
     if (customPath) setSvgPath(`${customPath}#${id}`);

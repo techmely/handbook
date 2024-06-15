@@ -1,14 +1,14 @@
 "use client";
 
 import { useDomain } from "@/hooks/useDomain";
-import { docsModules } from "@/utils/modules";
 import { appEnvs } from "@/utils/environment";
+import { docsModules } from "@/utils/modules";
 import algoliasearch from "algoliasearch/lite";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import type { SharedProps } from "fumadocs-ui/components/dialog/search";
 import SearchAlgoliaDialog from "fumadocs-ui/components/dialog/search-algolia";
-import { useEffect, useState, type FC } from "react";
+import { type FC, useEffect, useState } from "react";
 
 const client = algoliasearch(appEnvs.shared.algolia.appId, appEnvs.shared.algolia.apiKey);
 const index = client.initIndex(appEnvs.shared.algolia.index);

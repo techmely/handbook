@@ -1,7 +1,19 @@
 import { FontaineTransform } from "fontaine";
 import createMDX from "fumadocs-mdx/config";
+import createBundleAnalyzer from "@next/bundle-analyzer";
 
-const withMDX = createMDX();
+const withAnalyzer = createBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+const withMDX = createMDX({
+  rootContentPath: "./content",
+  buildSearchIndex: {
+    filter: (path) => {
+      return path.startsWith("docs");
+    },
+  },
+});
 
 const fontTaineOptions = {
   fallbacks: ["BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans"],
@@ -26,4 +38,4 @@ const config = {
   },
 };
 
-export default withMDX(config);
+export default withAnalyzer(withMDX(config));

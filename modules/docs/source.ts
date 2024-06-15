@@ -1,6 +1,5 @@
 import { map } from "@/.map";
 import { createSvgUse } from "@/components/SvgUse";
-import { languages } from "@/i18n";
 import { loader } from "fumadocs-core/source";
 import { createMDXSource, defaultSchemas } from "fumadocs-mdx";
 import { z } from "zod";
@@ -13,9 +12,8 @@ const docsMdxSchema = {
 };
 
 export const docSource = loader({
-  baseUrl: "/",
+  baseUrl: "/docs",
   rootDir: "docs",
-  languages,
   icon(icon) {
     if (icon && icon in svgIcons) return createSvgUse({ id: icon });
   },

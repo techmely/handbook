@@ -1,7 +1,3 @@
-ARG PORT=5000
-ARG NEXT_PUBLIC_APP_VERSION
-ARG NODE_ENV
-
 FROM oven/bun as base
 
 USER bun
@@ -17,11 +13,6 @@ FROM oven/bun
 USER bun
 
 WORKDIR /app/handbook
-
-ENV NEXT_TELEMETRY_DISABLED=true
-ENV PORT=$PORT
-ENV NEXT_PUBLIC_APP_VERSION=$NEXT_TELEMETRY_DISABLED
-ENV NODE_ENV=$NODE_ENV
 
 COPY --from=base --chown=bun /app/handbook/node_modules ./node_modules
 # Copying the production-ready application code, so it's one of few required artifacts

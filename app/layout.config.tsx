@@ -1,5 +1,5 @@
 import { SvgUse } from "@/components/SvgUse";
-import TechmelyLogo from "@/public/favicons/apple-touch-icon.webp";
+import TechmelyLogo from "@/public/icon.png";
 import type { BaseLayoutProps } from "fumadocs-ui/layout";
 import Image from "next/image";
 import { NavChildren } from "./layout.client";
@@ -13,7 +13,7 @@ export const baseOptions: BaseLayoutProps = {
         alt="Techmely"
         src={TechmelyLogo}
         sizes="42px"
-        className="size-4"
+        className="size-8"
         aria-label="Techmely Handbook"
       />
     ),
