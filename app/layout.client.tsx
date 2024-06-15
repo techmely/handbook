@@ -1,7 +1,7 @@
 "use client";
 
 import { useDomain } from "@/hooks/useDomain";
-import { domains } from "@/utils/domain";
+import { docsModules } from "@/utils/modules";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export const NavChildren = () => {
 
   return (
     <div className="rounded-md border bg-secondary/50 p-1 text-sm text-muted-foreground max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2">
-      {domains.map((d) => (
+      {docsModules.map((d) => (
         <Link
           key={d.param}
           href={`/docs/${d.param}`}

@@ -1,12 +1,12 @@
 "use client";
 
 import { useDomain } from "@/hooks/useDomain";
-import { domains } from "@/utils/domain";
+import { docsModules } from "@/utils/modules";
 import { appEnvs } from "@/utils/environment";
 import algoliasearch from "algoliasearch/lite";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
-import { type SharedProps } from "fumadocs-ui/components/dialog/search";
+import type { SharedProps } from "fumadocs-ui/components/dialog/search";
 import SearchAlgoliaDialog from "fumadocs-ui/components/dialog/search-algolia";
 import { useEffect, useState, type FC } from "react";
 
@@ -40,7 +40,7 @@ const AppSearchDialog: FC<SharedProps> = (props) => {
       }}
       footer={
         <div className="flex flex-row items-center gap-1">
-          {domains.map((domain) => (
+          {docsModules.map((domain) => (
             <button
               key={domain.param}
               className={clsx(itemVariants({ active: tag === domain.param }))}

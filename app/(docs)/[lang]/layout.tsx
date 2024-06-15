@@ -3,7 +3,7 @@ import { appConfig } from "@/app.config";
 import { docSource } from "@/modules/docs/source";
 import { DocsLayout } from "fumadocs-ui/layout";
 import type { ReactNode } from "react";
-import { AppProvider } from "../provider";
+import { AppProvider } from "@/app/provider";
 
 export default function Layout({
   params,

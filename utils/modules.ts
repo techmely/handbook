@@ -1,11 +1,11 @@
-export interface Domain {
+export interface DocsModule {
   param: string;
   name: string;
   description: string;
   iconId: string;
 }
 
-export const domains: Domain[] = [
+export const docsModules: DocsModule[] = [
   {
     name: "Teams",
     param: "teams",
