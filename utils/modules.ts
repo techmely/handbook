@@ -30,10 +30,4 @@ export const docsModules: DocsModule[] = [
     description: "We love money",
     iconId: "finance",
   },
-  {
-    name: "Partnership",
-    param: "partnership",
-    description: "Build project togethers",
-    iconId: "partnership",
-  },
 ];
