@@ -1,5 +1,5 @@
 {
-  "title": "teams",
+  "title": "Products",
   "root": true,
   "pages": ["---Products---", "index", "list", "principles"]
 }
