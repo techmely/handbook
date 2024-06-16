@@ -3,27 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --business-color: 250 80% 54%;
-  --partnership-color: 0 0% 9%;
+  --products-color: 250 80% 54%;
+  --engineering-color: 10 73% 51%;
   --teams-color: 220deg 91% 54%;
+  --finance-color: 174 62% 47%;
 }
 
 .dark {
-  --business-color: 250 100% 80%;
-  --partnership-color: 0 0% 100%;
+  --products-color: 250 100% 80%;
+  --engineering-color: 11 82% 59%;
   --teams-color: 217deg 92% 76%;
+  --finance-color: 151 65% 54%;
 }
 
 .teams {
   --primary: var(--teams-color);
 }
 
-.business {
-  --primary: var(--business-color);
+.products {
+  --primary: var(--products-color);
 }
 
-.partnership {
-  --primary: var(--partnership-color);
+.engineering {
+  --primary: var(--engineering-color);
+}
+
+.finance {
+  --primary: var(--finance-color);
 }
 
 body {

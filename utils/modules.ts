@@ -15,19 +15,19 @@ export const docsModules: DocsModule[] = [
   {
     name: "Products",
     param: "products",
-    description: "The product we built",
+    description: "The problem we solves",
     iconId: "products",
   },
   {
     name: "Engineering",
     param: "engineering",
-    description: "we are product's engineering",
+    description: "How we do science",
     iconId: "engineering",
   },
   {
     name: "Finance",
     param: "finance",
-    description: "We love money",
+    description: "Money is the ven",
     iconId: "finance",
   },
 ];
