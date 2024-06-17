@@ -5,4 +5,4 @@ services:
     image: registry.gitlab.com/techmely/handbook:0.0.0-rc.0
     network_mode: bridge
     ports:
-      - "${PORT}:${PORT}"
+      - "${PORT}:${PORT}" 

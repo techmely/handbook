@@ -1,0 +1,24 @@
+---
+title: CD
+description: Techmely CD overview
+---
+
+## Overview CD System
+
+Because we are small team, we should find away to automate the process of deploying the code to the server. 
+We use the following tools to deploy the code to the server.
+
+1. Github Actions(GHA)
+  - We use Github Actions to run the CI/CD pipeline.
+  - Push our images to Gitlab Private Registry
+2. Portainer
+  - We use Portainer to manage the docker container on the server
+3. Dockerfile + docker-compose
+  - We use Dockerfile to build the image and docker-compose to run the container on the server
+
+### Workflow
+
+1. After we push the new code to our specific branch(usally is main/develop). GHA will run the CD pipeline.
+2. GHA will build the image and push the image to the Gitlab Private Registry.
+3. The portainer server will pull the image from the Gitlab Private Registry,
+ and trigger re-deploy the container on the server, based on GitOps mechanism configured on [Portainer Stack](https://docs.portainer.io/v/2.20).
