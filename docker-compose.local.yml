@@ -6,7 +6,7 @@ services:
     build:
       context: .
       tags:
-        - "registry.gitlab.com/techmely/handbook:0.0.2"
+        - "registry.gitlab.com/techmely/handbook:0.0.3"
     network_mode: bridge
     environment:
       - NODE_ENV=production
