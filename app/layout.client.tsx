@@ -10,7 +10,7 @@ import type { FC, PropsWithChildren } from "react";
 export const Body: FC<PropsWithChildren> = ({ children }) => {
   const mode = useDomain();
 
-  return <body className={clsx(mode, "h-screen")}>{children}</body>;
+  return <body className={clsx(mode, "flex min-h-screen flex-col")}>{children}</body>;
 };
 
 const itemVariants = cva("rounded-md px-2 py-1 transition-colors hover:text-accent-foreground", {

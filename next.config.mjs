@@ -1,6 +1,6 @@
+import createBundleAnalyzer from "@next/bundle-analyzer";
 import { FontaineTransform } from "fontaine";
 import createMDX from "fumadocs-mdx/config";
-import createBundleAnalyzer from "@next/bundle-analyzer";
 
 const withAnalyzer = createBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
