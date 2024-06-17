@@ -2,7 +2,10 @@ name: techmely
 
 services:
   handbook:
-    image: registry.gitlab.com/techmely/handbook:0.0.1
+    image: registry.gitlab.com/techmely/handbook:0.0.2
     network_mode: bridge
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORT}
     ports:
       - "${PORT}:${PORT}"
