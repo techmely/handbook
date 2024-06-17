@@ -18,6 +18,38 @@ We use the following tools to deploy the code to the server.
 
 ### Workflow
 
+
+Currently
+1. You need to have an account on Gitlab and Portainer.
+2. You need to have the permission to push the code to the repository, and ensure that the repository is the same with image tag.
+    Example: your images tag is: "registry.gitlab.com/organization_name/product_name:0.0.0-rc.0". This require you must create a repository in Gitlab, like https://gitlab.com/organization_name/product_name
+3. You need to upgrade version of the image in the `docker-compose.local.yml` and `docker-compose.development.yml` file. The upgrade version bump following the [Semantic Versioning](https://semver.org/).    
+3. You need to up the `docker-compose.local.yml` file to build the nessarry container for the project.
+
+```bash
+docker-compose -f docker-compose.local.yml up -d
+
+```
+
+4. After build complete and double-check that will work on the local machine, you can push the images to the Gitlab Private Registry with command:
+
+```bash
+docker login -u user_name -p access_token registry.gitlab.com
+```
+5. Push the image to the Gitlab Private Registry
+
+
+```bash
+docker push registry.gitlab.com/organization_name/product_name:0.0.0-rc.0
+```
+
+6. Wait for the Portainer server auto trigger fetch the repo(develop branch) around 5 min, and re-deploy the container with the new image.
+If you want to trigger the re-deploy manually, you can go to the Portainer server -> click on the `Stacks` menu -> Chose the stack you want to re-deplot -> click on the `Pull and redeploy` button.
+
+7. In case you want to add/update the runtime environment variables, go to page like step 6, and click on the `Load variables from .env` or `Add an environment variable` button. 
+
+
+(Next Future)
 1. After we push the new code to our specific branch(usally is main/develop). GHA will run the CD pipeline.
 2. GHA will build the image and push the image to the Gitlab Private Registry.
 3. The portainer server will pull the image from the Gitlab Private Registry,
