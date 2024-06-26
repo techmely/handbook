@@ -10,19 +10,19 @@
     "lint": "bunx @biomejs/biome format --write"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "1.0.7",
+    "@radix-ui/react-tooltip": "1.1.1",
     "@resvg/resvg-js": "2.6.2",
     "@techmely/reset-css": "1.0.4",
     "@techmely/utils": "3.2.0",
-    "algoliasearch": "4.23.3",
+    "algoliasearch": "4.24.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
-    "framer-motion": "11.2.10",
-    "fumadocs-core": "^12.1.0",
-    "fumadocs-mdx": "^8.2.32",
-    "fumadocs-openapi": "2.0.5",
+    "framer-motion": "11.2.12",
+    "fumadocs-core": "^12.2.5",
+    "fumadocs-mdx": "^8.2.33",
+    "fumadocs-openapi": "3.1.3",
     "fumadocs-twoslash": "1.1.0",
-    "fumadocs-ui": "^12.1.0",
+    "fumadocs-ui": "^12.2.5",
     "next": "^14.2.4",
     "next-sitemap": "4.2.3",
     "phenomenon": "1.6.0",
@@ -33,11 +33,11 @@
     "surrealdb.js": "1.0.0-beta.9"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.1",
+    "@biomejs/biome": "1.8.2",
     "@next/bundle-analyzer": "14.2.4",
     "@techmely/types": "1.6.9",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/rss": "0.0.32",
@@ -45,6 +45,6 @@
     "fontaine": "0.5.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   }
 }
