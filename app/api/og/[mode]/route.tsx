@@ -5,8 +5,9 @@ import type { NextRequest } from "next/server";
 const foreground = "hsl(0 0% 98%)";
 const mutedForeground = "hsl(0 0% 63.9%)";
 const background = "rgba(10, 10, 10)";
+const fontUrl = new URL("./BeVietnamPro-Bold.ttf", import.meta.url);
 
-const bold = fetch("http://localhost:3000/fonts/bvp.bold.woff2").then((res) => res.arrayBuffer());
+const bold = fetch(fontUrl).then((res) => res.arrayBuffer());
 
 export async function GET(
   request: NextRequest,
