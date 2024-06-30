@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.2",
+    "@dotenvx/dotenvx": "1.1.0",
     "@next/bundle-analyzer": "14.2.4",
     "@techmely/types": "1.6.9",
     "@types/mdx": "^2.0.13",
