@@ -1,6 +1,7 @@
 import { SvgUse } from "@/components/SvgUse";
-import { docSource, type PageDocs } from "@/modules/docs/source";
+import { type PageDocs, docSource } from "@/modules/docs/source";
 import { Card, Cards } from "fumadocs-ui/components/card";
+import { RollButton } from "fumadocs-ui/components/roll-button";
 import { DocsBody, DocsPage } from "fumadocs-ui/page";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -38,6 +39,7 @@ export default async function Page({ params }: { params: Param }) {
         footer: <FooterPage path={pagePath} />,
       }}
     >
+      <RollButton />
       <DocsBody>
         <h1 className="text-3xl font-bold text-foreground sm:text-4xl">{page.data.title}</h1>
         <p className="mb-8 text-lg text-muted-foreground">{page.data.description}</p>

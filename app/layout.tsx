@@ -1,10 +1,11 @@
 import "./global.css";
 import { appConfig } from "@/app.config";
+import { useDomain } from "@/hooks/useDomain";
 import { createMetadata } from "@/modules/seo/metadata";
+import clsx from "clsx";
 import { RootProvider } from "fumadocs-ui/provider";
 import type { Viewport } from "next";
 import type { ReactNode } from "react";
-import { Body } from "./layout.client";
 
 export const metadata = createMetadata({
   title: {
@@ -23,11 +24,13 @@ export const viewport: Viewport = {
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
+  const domain = useDomain();
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <Body>
+      <body className={clsx(domain, "flex min-h-screen flex-col")}>
         <RootProvider>{children}</RootProvider>
-      </Body>
+      </body>
     </html>
   );
 }

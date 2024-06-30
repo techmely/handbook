@@ -1,11 +1,40 @@
 import { SvgUse } from "@/components/SvgUse";
+import { useDomain } from "@/hooks/useDomain";
+import { docSource } from "@/modules/docs/source";
 import TechmelyLogo from "@/public/icon.png";
+import { docsModules } from "@/utils/modules";
+import { cva } from "class-variance-authority";
+import clsx from "clsx";
+import { RootToggle } from "fumadocs-ui/components/layout/root-toggle";
 import type { BaseLayoutProps, DocsLayoutProps } from "fumadocs-ui/layout";
 import Image from "next/image";
-import { NavChildren } from "./layout.client";
-import { docSource } from "@/modules/docs/source";
-import { RootToggle } from "fumadocs-ui/components/layout/root-toggle";
-import { docsModules } from "@/utils/modules";
+import Link from "next/link";
+
+const itemVariants = cva("rounded-md px-2 py-1 transition-colors hover:text-accent-foreground", {
+  variants: {
+    active: {
+      true: "bg-accent text-accent-foreground",
+    },
+  },
+});
+
+const NavChildren = () => {
+  const domain = useDomain();
+
+  return (
+    <div className="rounded-md border bg-secondary/50 p-1 text-sm text-muted-foreground max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2">
+      {docsModules.map((d) => (
+        <Link
+          key={d.param}
+          href={`/docs/${d.param}`}
+          className={clsx(itemVariants({ active: domain === d.param }))}
+        >
+          {d.name}
+        </Link>
+      ))}
+    </div>
+  );
+};
 
 export const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/techmely/handbook",

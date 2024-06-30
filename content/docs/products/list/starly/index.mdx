@@ -3,6 +3,8 @@ title: Starly
 description: Starly is a platform to centralize your portfolio & blog, effortlessly.
 ---
 
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
 ## Overview Product
 
 ## The problem we are solving
@@ -38,9 +40,11 @@ Humman Resources
 
 ### Customer Relationships
 
-- Self-service
-- Feedback & Support Request dialog
-- Community
+<Tabs items={['Self-service', 'Feedback', 'Community']}>
+  <Tab value="Self-service">Self-service</Tab>
+  <Tab value="Feedback">Feedback & Support Request dialog</Tab>
+  <Tab value="Community">Community</Tab>
+</Tabs>
 
 ### Customer Segments
 
