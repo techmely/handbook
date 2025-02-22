@@ -1,5 +1,13 @@
 {
   "title": "OKRs Guide",
   "root": true,
-  "pages": ["---OKRs Guide---", "index", "list", "principles"]
+  "pages": [
+    "---OKRs Guide---",
+    "index",
+    "hieu-ve-okrs",
+    "viet-okrs-nhu-mot-chuyen-gia",
+    "theo-doi-va-do-luong",
+    "okrs-nguyen-ban",
+    "tong-ket"
+  ]
 }
