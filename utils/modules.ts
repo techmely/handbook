@@ -7,21 +7,15 @@ export interface DocsModule {
 
 export const docsModules: DocsModule[] = [
   {
-    name: 'Teams',
-    param: 'teams',
-    description: 'Overview our teams',
-    iconId: 'teams',
-  },
-  {
     name: 'OKRs Guide',
     param: 'okrs-guide',
     description: 'How we do OKRs',
     iconId: 'okrs-guide',
   },
   {
-    name: 'Engineering',
-    param: 'engineering',
-    description: 'How we do science',
-    iconId: 'engineering',
+    name: 'About Us',
+    param: 'teams',
+    description: 'Overview our teams',
+    iconId: 'teams',
   },
 ]

@@ -1,4 +1,0 @@
-{
-  "title": "Product Testing Quality",
-  "pages": ["unit", "e2e", "performance", "security", "accessibility"]
-}
