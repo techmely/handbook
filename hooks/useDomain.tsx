@@ -5,5 +5,5 @@ export function useDomain(): string | undefined {
   console.log(pathname)
   if (pathname.includes('/teams/')) return 'teams'
   if (pathname.includes('/engineering/')) return 'engineering'
-  return 'products'
+  return 'okrs-guide'
 }

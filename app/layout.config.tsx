@@ -57,14 +57,6 @@ export const baseOptions: BaseLayoutProps = {
     ),
     children: <NavChildren />,
   },
-  links: [
-    {
-      icon: <SvgUse id="note-stack-outline" />,
-      text: 'Blog',
-      url: '/blog',
-      active: 'nested-url',
-    },
-  ],
 }
 
 export const docsLayoutOptions: DocsLayoutProps = {

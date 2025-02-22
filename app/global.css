@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --products-color: 174 62% 47%;
+  --okrs-guide-color: 174 62% 47%;
   --engineering-color: 10 73% 51%;
   --teams-color: 220deg 91% 54%;
 }
 
 .dark {
-  --products-color: 151 65% 54%;
+  --okrs-guide-color: 151 65% 54%;
   --engineering-color: 11 82% 59%;
   --teams-color: 217deg 92% 76%;
 }
@@ -18,8 +18,8 @@
   --primary: var(--teams-color);
 }
 
-.products {
-  --primary: var(--products-color);
+.okrs-guide {
+  --primary: var(--okrs-guide-color);
 }
 
 .engineering {

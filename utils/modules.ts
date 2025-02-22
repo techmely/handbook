@@ -13,10 +13,10 @@ export const docsModules: DocsModule[] = [
     iconId: 'teams',
   },
   {
-    name: 'Products',
-    param: 'products',
-    description: 'The problem we solves',
-    iconId: 'products',
+    name: 'OKRs Guide',
+    param: 'okrs-guide',
+    description: 'How we do OKRs',
+    iconId: 'okrs-guide',
   },
   {
     name: 'Engineering',
