@@ -9,8 +9,8 @@ import type { ReactNode } from "react";
 
 export const metadata = createMetadata({
   title: {
-    template: "%s | Techmely Handbook",
-    default: "Techmely Handbook",
+    template: "%s | Techmely",
+    default: "Techmely",
   },
   description: appConfig.description,
   metadataBase: new URL(appConfig.url),

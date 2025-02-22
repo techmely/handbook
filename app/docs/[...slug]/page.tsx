@@ -78,7 +78,7 @@ export function generateMetadata({ params }: { params: { slug: string[] } }) {
   const page = docSource.getPage(params.slug);
 
   if (page == null) notFound();
-  const description = page.data.description ?? "A page from the Techmely Handbook";
+  const description = page.data.description ?? "A page from the Techmely";
 
   const imageParams = new URLSearchParams();
   imageParams.set("title", page.data.title);

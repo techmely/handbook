@@ -1,4 +1,4 @@
-// name: Techmely Handbook
+// name: Techmely
 // shortDescription: Techmely's Next Generation
 // description: The Indie Developer Group born to build things, focus on Digital Products/Services
 // github: techmely/techmely

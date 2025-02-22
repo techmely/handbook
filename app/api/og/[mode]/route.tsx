@@ -19,7 +19,7 @@ export async function GET(
 
   return new ImageResponse(
     OG({
-      title: title ?? "Techmely Handbook",
+      title: title ?? "Techmely",
       description: description ?? "The Techmely's Documentation ",
       mode: docsModules.find((m) => m.param === params.mode) ?? docsModules[0],
     }),
