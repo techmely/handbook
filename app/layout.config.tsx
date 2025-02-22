@@ -62,7 +62,20 @@ export const baseOptions: BaseLayoutProps = {
 export const docsLayoutOptions: DocsLayoutProps = {
   ...baseOptions,
   tree: docSource.pageTree,
-  nav: {},
+  nav: {
+    title: (
+      <div className="flex items-center gap-2">
+        <Image
+          alt="Techmely"
+          src={TechmelyLogo}
+          sizes="20px"
+          className="size-6"
+          aria-label="Techmely"
+        />
+        <p className="text-lg font-bold uppercase">Techmely</p>
+      </div>
+    ),
+  },
   sidebar: {
     defaultOpenLevel: 0,
     banner: (
