@@ -12,7 +12,6 @@ export const SvgUse: FC<SvgUseProps> = ({ role, customPath, id, label, ...rest }
   }, [customPath, id]);
 
   return (
-    // biome-ignore lint/nursery/useSemanticElements: We need this
     <svg role="img" aria-label={label || "Present Icon"} {...rest}>
       <use href={svgPath} />
     </svg>

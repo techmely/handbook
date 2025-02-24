@@ -1,9 +1,5 @@
 {
   "title": "teams",
   "root": true,
-  "pages": [
-    "---TechMely---",
-    "index",
-    "mission"
-  ]
+  "pages": ["---TechMely---", "index", "mission"]
 }

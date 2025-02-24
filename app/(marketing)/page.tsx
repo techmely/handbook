@@ -1,13 +1,13 @@
-import { appConfig } from '@/app.config'
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { TargetIcon, UsersIcon } from 'lucide-react'
+import { appConfig } from "@/app.config";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { TargetIcon, UsersIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: appConfig.url,
   },
-}
+};
 
 export default function HomePage() {
   return (
@@ -20,15 +20,15 @@ export default function HomePage() {
                 <TargetIcon
                   className="p-1 rounded-md size-6 shrink-0 bg-gradient-to-t from-background/80"
                   style={{
-                    backgroundColor: 'hsl(var(--okrs-guide-color)/.3)',
-                    color: 'hsl(var(--okrs-guide-color))',
+                    backgroundColor: "hsl(var(--okrs-guide-color)/.3)",
+                    color: "hsl(var(--okrs-guide-color))",
                   }}
                 />
                 <h2 className="text-lg font-medium">OKRs Guide</h2>
               </div>
               <p className="mb-4 text-sm text-muted-foreground">
-                Comprehensive guide to understand and implement OKRs effectively
-                in your organization
+                Comprehensive guide to understand and implement OKRs effectively in your
+                organization
               </p>
               <Link
                 href="/docs/okrs-guide"
@@ -45,15 +45,14 @@ export default function HomePage() {
                 <UsersIcon
                   className="p-1 rounded-md size-6 shrink-0 bg-gradient-to-t from-background/80"
                   style={{
-                    backgroundColor: 'hsl(var(--teams-color)/.3)',
-                    color: 'hsl(var(--teams-color))',
+                    backgroundColor: "hsl(var(--teams-color)/.3)",
+                    color: "hsl(var(--teams-color))",
                   }}
                 />
                 <h2 className="text-lg font-medium">About Us</h2>
               </div>
               <p className="mb-4 text-sm text-muted-foreground">
-                Learn more about our team, mission and how we can help your
-                business grow
+                Learn more about our team, mission and how we can help your business grow
               </p>
               <Link
                 href="/docs/teams"
@@ -66,5 +65,5 @@ export default function HomePage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

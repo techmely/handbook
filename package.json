@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "gen.docs": "bun ./scripts/generate-docs.tsx",
-    "lint": "bunx @biomejs/biome format --write",
+    "lint.format": "biome format --write",
     "start": "next start",
     "upgrade.deps": "ncu --dep dev,prod,peer -u -p bun"
   },
