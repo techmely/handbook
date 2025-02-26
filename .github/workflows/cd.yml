@@ -1,0 +1,64 @@
+name: CD
+
+on:
+  push:
+    tags:
+      - 'production-*'
+      - 'development-*'
+
+env:
+  HUSKY: "0"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [22.x]
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Build and push Docker image
+        run: |
+          chmod -R +x deploy/scripts
+          ./deploy/scripts/build-docker.sh
+        env:
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITLAB_REGISTRY_TOKEN: ${{ secrets.GITLAB_REGISTRY_TOKEN }}
+          GITLAB_REGISTRY_USER: ${{ secrets.GITLAB_REGISTRY_USER }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Release ${{ github.ref_name }} + update docker-compose.yml files"
+          branch: develop
+          push: true
+          commit_user_name: techmely-bot
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ANT_OKRS_APP }}
+          SLACK_MESSAGE: "Deploy ant-okrs-app:${{ github.ref_name }} to production successfully"
+          SLACK_TITLE: "Deploy ant-okrs-app:${{ github.ref_name }} to production successfully"
+          SLACK_COLOR: good
+          SLACK_FOOTER: "Techmely"
+          SLACK_ICON: ":rocket:"
+          SLACK_USERNAME: "Github Action Bot"
+          SLACK_CHANNEL: "okr-product"
+
+      - name: Portainer Development Notification
+        if: contains(github.ref_name, 'development')
+        uses: newarifrh/portainer-service-webhook@v1
+        with:
+            webhook_url: ${{ secrets.PORTAINER_WEB_HOOK_DEVELOPMENT }}
+
+      - name: Portainer Production Notification
+        if: contains(github.ref_name, 'production')
+        uses: newarifrh/portainer-service-webhook@v1
+        with:
+            webhook_url: ${{ secrets.PORTAINER_WEB_HOOK_PRODUCTION }}

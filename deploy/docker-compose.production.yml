@@ -1,0 +1,17 @@
+name: techmely
+
+services:
+  handbook:
+    image: registry.gitlab.com/techmely/handbook:production-0.1.0
+    network_mode: bridge
+    environment:
+      - NEXT_PUBLIC_APP_VERSION=${NEXT_PUBLIC_APP_VERSION}
+      - NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV}
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_ALGOLIA_APP_ID=${NEXT_PUBLIC_ALGOLIA_APP_ID}
+      - NEXT_PUBLIC_ALGOLIA_API_KEY=${NEXT_PUBLIC_ALGOLIA_API_KEY}
+      - NEXT_PUBLIC_ALGOLIA_INDEX=${NEXT_PUBLIC_ALGOLIA_INDEX}
+    ports:
+      - "${PORT}:${PORT}"

@@ -1,6 +1,6 @@
 import { map } from "@/.map";
 import { createSvgUse } from "@/components/SvgUse";
-import { loader, type InferMetaType, type InferPageType } from "fumadocs-core/source";
+import { type InferMetaType, type InferPageType, loader } from "fumadocs-core/source";
 import { createMDXSource, defaultSchemas } from "fumadocs-mdx";
 import { z } from "zod";
 import { svgIcons } from "../ui/constant";

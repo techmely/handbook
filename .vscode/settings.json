@@ -1,20 +1,38 @@
 {
   "cSpell.words": [
-    "algoliasearch",
-    "clsx",
-    "defu",
-    "fontaine",
-    "fumadocs",
-    "nuxt",
-    "nuxtjs",
-    "resvg",
-    "twoslash",
-    "webp",
-    "zalo"
+    "addgroup",
+    "adduser",
+    "buildjet",
+    "declutter",
+    "echarts",
+    "hardlinks",
+    "Kanban",
+    "knip",
+    "newarifrh",
+    "nextjs",
+    "okrs",
+    "pageable",
+    "partytown",
+    "prerender",
+    "techmely",
+    "typesafe",
+    "vaul"
   ],
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "always",
     "source.fixAll": "explicit",
+    "quickfix.biome": "explicit",
     "source.addMissingImports": "explicit"
+  },
+  "[typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[css][scss][less]": {
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
