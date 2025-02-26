@@ -35,7 +35,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Release ${{ github.ref_name }} + update docker-compose.yml files"
-          branch: develop
+          branch: main
           push: true
           commit_user_name: techmely-bot
 
