@@ -1,4 +1,3 @@
-import { SvgUse } from "@/components/SvgUse";
 import { type PageDocs, docSource } from "@/modules/docs/source";
 import { Card, Cards } from "fumadocs-ui/components/card";
 import { RollButton } from "fumadocs-ui/components/roll-button";
@@ -12,32 +11,18 @@ interface Param {
 
 export const dynamicParams = false;
 
-// @ts-expect-error
-function FooterPage({ path }) {
-  return (
-    <a href={`https://github.com/techmely/handbook/blob/main/${path}`}>
-      <SvgUse id="edit" className="size-3" />
-      Edit on github
-    </a>
-  );
-}
-
 export default async function Page({ params }: { params: Param }) {
   const page = docSource.getPage(params.slug);
 
   if (page == null) {
     notFound();
   }
-  const pagePath = `content/docs/${page.file.path}`;
 
   return (
     <DocsPage
       toc={page.data.exports.toc}
       lastUpdate={page.data.exports.lastModified}
       full={page.data.full}
-      tableOfContent={{
-        footer: <FooterPage path={pagePath} />,
-      }}
     >
       <RollButton />
       <DocsBody>
