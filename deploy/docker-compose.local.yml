@@ -6,7 +6,7 @@ services:
       context: ..
       dockerfile: deploy/Dockerfile
       tags:
-        - registry.gitlab.com/techmely/handbook:production-0.1.1
+        - registry.gitlab.com/techmely/handbook:production-0.1.2
       args:
         - NEXT_PUBLIC_APP_VERSION=${NEXT_PUBLIC_APP_VERSION}
         - NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV}
