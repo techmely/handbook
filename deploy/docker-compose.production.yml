@@ -2,7 +2,7 @@ name: techmely
 
 services:
   handbook:
-    image: registry.gitlab.com/techmely/handbook:production-0.1.2
+    image: registry.gitlab.com/techmely/handbook:production-0.1.3
     network_mode: bridge
     environment:
       - NEXT_PUBLIC_APP_VERSION=${NEXT_PUBLIC_APP_VERSION}
