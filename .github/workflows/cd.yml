@@ -43,19 +43,13 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ANT_OKRS_APP }}
-          SLACK_MESSAGE: "Deploy ant-okrs-app:${{ github.ref_name }} to production successfully"
-          SLACK_TITLE: "Deploy ant-okrs-app:${{ github.ref_name }} to production successfully"
+          SLACK_MESSAGE: "Deploy handbook:${{ github.ref_name }} to production successfully"
+          SLACK_TITLE: "Deploy handbook:${{ github.ref_name }} to production successfully"
           SLACK_COLOR: good
           SLACK_FOOTER: "Techmely"
           SLACK_ICON: ":rocket:"
           SLACK_USERNAME: "Github Action Bot"
           SLACK_CHANNEL: "okr-product"
-
-      - name: Portainer Development Notification
-        if: contains(github.ref_name, 'development')
-        uses: newarifrh/portainer-service-webhook@v1
-        with:
-            webhook_url: ${{ secrets.PORTAINER_WEB_HOOK_DEVELOPMENT }}
 
       - name: Portainer Production Notification
         if: contains(github.ref_name, 'production')
