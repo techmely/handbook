@@ -1,0 +1,12 @@
+{
+  "title": "Nuôi Con EASY",
+  "root": true,
+  "pages": [
+    "---Nuôi Con EASY---",
+    "index",
+    "phuong-phap-easy",
+    "an-ngu-tu-lap",
+    "dinh-duong-cho-be",
+    "tu-lap-va-ky-luat"
+  ]
+}

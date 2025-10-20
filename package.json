@@ -15,7 +15,6 @@
     "docker.down": "docker compose -f deploy/docker-compose.local.yml down",
     "docker.up": "docker compose -f deploy/docker-compose.local.yml up -d"
   },
-  "packageManager": "bun@1.2.3",
   "dependencies": {
     "@radix-ui/react-tooltip": "1.1.1",
     "@resvg/resvg-js": "2.6.2",

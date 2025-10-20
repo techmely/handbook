@@ -21,30 +21,12 @@ const itemVariants = cva(
   },
 )
 
-const NavChildren = () => {
-  const domain = useDomain()
-
-  return (
-    <div className="p-1 text-sm border rounded-md bg-secondary/50 text-muted-foreground max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2">
-      {docsModules.map((d) => (
-        <Link
-          key={d.param}
-          href={`/docs/${d.param}`}
-          className={clsx(itemVariants({ active: domain === d.param }))}
-        >
-          {d.name}
-        </Link>
-      ))}
-    </div>
-  )
-}
-
 export const baseOptions: BaseLayoutProps = {
   githubUrl: 'https://github.com/techmely/handbook',
   nav: {
     transparentMode: 'top',
     title: (
-      <div className="flex items-center gap-2">
+      <div className="flex gap-2 items-center">
         <Image
           alt="Techmely"
           src={TechmelyLogo}
@@ -55,7 +37,6 @@ export const baseOptions: BaseLayoutProps = {
         <p className="text-xl font-bold uppercase">Techmely</p>
       </div>
     ),
-    children: <NavChildren />,
   },
 }
 
@@ -64,7 +45,7 @@ export const docsLayoutOptions: DocsLayoutProps = {
   tree: docSource.pageTree,
   nav: {
     title: (
-      <div className="flex items-center gap-2">
+      <div className="flex gap-2 items-center">
         <Image
           alt="Techmely"
           src={TechmelyLogo}
